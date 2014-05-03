@@ -19,7 +19,6 @@ ws.on 'open', ->
         delay = Math.random() * data.sprinkle or 0
 
         setTimeout ->
-          console.log delay
           sound_pack.play mp3
         , delay
 
