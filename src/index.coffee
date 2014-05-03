@@ -16,7 +16,12 @@ ws.on 'open', ->
         clip = sound_pack.parse data.sound, data.label
         mp3 = sound_pack.get_mp3 clip
 
-        sound_pack.play mp3
+        delay = Math.random() * data.sprinkle or 0
+
+        setTimeout ->
+          console.log delay
+          sound_pack.play mp3
+        , delay
 
   ws.on 'error', (err) ->
     console.log err
