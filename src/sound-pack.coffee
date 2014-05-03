@@ -10,6 +10,8 @@ SoundPack = (pack) ->
 
   self = this
 
+  self.counters = {}
+  self.label_map = {}
   self.sounds = []
   self.pack = pack
 
@@ -20,30 +22,29 @@ SoundPack = (pack) ->
     self.sounds = body
 
 
-  self.parse = (id) ->
+  self.parse = (id, label) ->
     path = id.split '/'
 
     if path[0].length > 1
-      clip =
-        pack: path[0]
-        name: path[1]
-    else
-      sound = _.findWhere self.sounds,
-        emotion: path[0]
-        intrusiveness: parseInt path[1]
-      clip =
-        pack: self.pack
-        name: sound.name
+      return pack: path[0], name: path[1]
 
-      console.log clip
+    if _.has self.label_map, "#{label}/#{id}"
+      return self.label_map["#{label}/#{id}"]
 
-    return clip
+    sounds = _.where self.sounds,
+      emotion: path[0]
+      intrusiveness: parseInt path[1]
 
+    counters[id] ?= 0
+    count = counters[id]++ % sounds.length
+
+    return self.label_map["#{label}/#{id}"] =
+      pack: self.pack
+      name: sounds[count].name
 
 
   self.get_mp3 = (clip) ->
     mp3 = "#{PACK_DIR}/#{clip.pack}/#{clip.name}.mp3"
-    console.log mp3
     return mp3
 
 
@@ -51,7 +52,6 @@ SoundPack = (pack) ->
     request.get path
     .pipe new lame.Decoder()
     .on 'format', (format) ->
-      console.log format
       this.pipe new Speaker format
 
   return self
