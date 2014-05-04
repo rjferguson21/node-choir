@@ -10,7 +10,7 @@ q = async.queue (task, callback) ->
   console.log task
   sound_pack.play task.mp3
   .on 'close', callback
-, 1
+, 8
 
 
 ws.on 'open', ->

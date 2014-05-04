@@ -5,7 +5,8 @@ lame = require 'lame'
 Speaker = require 'speaker'
 fs = require 'fs'
 
-PACK_DIR = 'https://choir.io/static/packs'
+PACK_URL = 'https://choir.io/static/packs'
+PACK_DIR = '../sounds'
 
 SoundPack = (pack) ->
 
@@ -17,7 +18,7 @@ SoundPack = (pack) ->
   self.pack = pack
 
   request.get
-    url: "#{PACK_DIR}/#{self.pack}/pack.json"
+    url: "#{PACK_URL}/#{self.pack}/pack.json"
     json: true
   , (err, res, body) ->
     self.sounds = body
@@ -53,7 +54,8 @@ SoundPack = (pack) ->
 
     speaker = new Speaker
 
-    fs.createReadStream('../sounds/drip1.mp3')
+    console.log path
+    fs.createReadStream(path)
     .pipe new lame.Decoder()
     .on 'format', (format) ->
       this.pipe speaker
