@@ -53,18 +53,18 @@ SoundPack = (pack) ->
     mp3 = "#{PACK_DIR}/#{clip.pack}/#{clip.name}.mp3"
     return mp3
 
-
-  self.play = (path) ->
-
-    speaker = new Speaker
+  self.play = (path, callback) ->
 
     console.log path
     fs.createReadStream(path)
     .pipe new lame.Decoder()
     .on 'format', (format) ->
+      speaker = new Speaker format
+      speaker.on 'close', ->
+        callback()
+
       this.pipe speaker
 
-    return speaker
 
   return self
 

@@ -8,8 +8,7 @@ sound_pack = pack process.argv[2] or 'submarine'
 
 q = async.queue (task, callback) ->
   console.log task
-  sound_pack.play task.mp3
-  .on 'close', callback
+  sound_pack.play task.mp3, callback
 , 8
 
 
