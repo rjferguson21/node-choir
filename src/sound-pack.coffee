@@ -49,10 +49,14 @@ SoundPack = (pack) ->
 
 
   self.play = (path) ->
+
+    speaker = new Speaker
+
     request.get path
     .pipe new lame.Decoder()
-    .on 'format', (format) ->
-      this.pipe new Speaker format
+    .pipe speaker
+
+    speaker
 
   return self
 
