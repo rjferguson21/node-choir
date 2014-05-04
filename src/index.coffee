@@ -8,10 +8,8 @@ sound_pack = pack process.argv[2] or 'submarine'
 
 q = async.queue (task, callback) ->
   console.log task
-  setTimeout ->
-    sound_pack.play task.mp3
-    .on 'close', callback
-  , task.delay
+  sound_pack.play task.mp3
+  .on 'close', callback
 , 2
 
 
@@ -30,8 +28,10 @@ ws.on 'open', ->
         console.log clip, q.length()
         delay = Math.random() * data.sprinkle or 0
 
-        q.push {mp3, delay}, ->
-          console.log 'done'
+        setTimeout ->
+          q.push { mp3 }, ->
+            console.log 'done'
+        , delay
 
   ws.on 'error', (err) ->
     console.log err
