@@ -1,0 +1,217 @@
+[{
+  "emotion": "n",
+  "intrusiveness": 2,
+  "name": "boo"
+}, {
+  "emotion": "g",
+  "intrusiveness": 3,
+  "name": "bowser_defeat1"
+}, {
+  "emotion": "g",
+  "intrusiveness": 3,
+  "name": "bowser_defeat2"
+}, {
+  "emotion": "b",
+  "intrusiveness": 3,
+  "name": "bowser_message"
+}, {
+  "emotion": "n",
+  "intrusiveness": 1,
+  "name": "camera_click"
+}, {
+  "emotion": "n",
+  "intrusiveness": 3,
+  "name": "camera_lakitu"
+}, {
+  "emotion": "n",
+  "intrusiveness": 3,
+  "name": "enter_bowser_course"
+}, {
+  "emotion": "g",
+  "intrusiveness": 2,
+  "name": "enter_course"
+}, {
+  "emotion": "b",
+  "intrusiveness": 2,
+  "name": "exit_course"
+}, {
+  "emotion": "b",
+  "intrusiveness": 3,
+  "name": "game_over"
+}, {
+  "emotion": "g",
+  "intrusiveness": 3,
+  "name": "happy_message"
+}, {
+  "emotion": "g",
+  "intrusiveness": 3,
+  "name": "here_we_go"
+}, {
+  "emotion": "g",
+  "intrusiveness": 3,
+  "name": "high_score"
+}, {
+  "emotion": "b",
+  "intrusiveness": 1,
+  "name": "impact"
+}, {
+  "emotion": "g",
+  "intrusiveness": 2,
+  "name": "key_get"
+}, {
+  "emotion": "n",
+  "intrusiveness": 2,
+  "name": "kill_enemy"
+}, {
+  "emotion": "n",
+  "intrusiveness": 1,
+  "name": "mario_boing"
+}, {
+  "emotion": "b",
+  "intrusiveness": 1,
+  "name": "mario_burned"
+}, {
+  "emotion": "b",
+  "intrusiveness": 0,
+  "name": "mario_doh"
+}, {
+  "emotion": "n",
+  "intrusiveness": 3,
+  "name": "mario_dreaming"
+}, {
+  "emotion": "b",
+  "intrusiveness": 2,
+  "name": "mario_drowning"
+}, {
+  "emotion": "b",
+  "intrusiveness": 3,
+  "name": "mario_falling"
+}, {
+  "emotion": "b",
+  "intrusiveness": 2,
+  "name": "mario_game_over"
+}, {
+  "emotion": "n",
+  "intrusiveness": 1,
+  "name": "mario_haha"
+}, {
+  "emotion": "n",
+  "intrusiveness": 2,
+  "name": "mario_hello"
+}, {
+  "emotion": "n",
+  "intrusiveness": 1,
+  "name": "mario_here_we_go"
+}, {
+  "emotion": "n",
+  "intrusiveness": 1,
+  "name": "mario_hoo"
+}, {
+  "emotion": "n",
+  "intrusiveness": 1,
+  "name": "mario_hoohoo"
+}, {
+  "emotion": "b",
+  "intrusiveness": 1,
+  "name": "mario_hurt"
+}, {
+  "emotion": "n",
+  "intrusiveness": 1,
+  "name": "mario_its_me"
+}, {
+  "emotion": "n",
+  "intrusiveness": 2,
+  "name": "mario_lets_go"
+}, {
+  "emotion": "b",
+  "intrusiveness": 1,
+  "name": "mario_lost_a_life"
+}, {
+  "emotion": "n",
+  "intrusiveness": 1,
+  "name": "mario_mamma-mia"
+}, {
+  "emotion": "n",
+  "intrusiveness": 1,
+  "name": "mario_okey-dokey"
+}, {
+  "emotion": "n",
+  "intrusiveness": 0,
+  "name": "mario_oof"
+}, {
+  "emotion": "g",
+  "intrusiveness": 1,
+  "name": "mario_press_start"
+}, {
+  "emotion": "n",
+  "intrusiveness": 1,
+  "name": "mario_pulling_up"
+}, {
+  "emotion": "n",
+  "intrusiveness": 1,
+  "name": "mario_snore_part1"
+}, {
+  "emotion": "n",
+  "intrusiveness": 1,
+  "name": "mario_snore_part2"
+}, {
+  "emotion": "n",
+  "intrusiveness": 1,
+  "name": "mario_so_long_bowser"
+}, {
+  "emotion": "g",
+  "intrusiveness": 1,
+  "name": "mario_thank_you"
+}, {
+  "emotion": "n",
+  "intrusiveness": 1,
+  "name": "mario_ungh"
+}, {
+  "emotion": "n",
+  "intrusiveness": 1,
+  "name": "mario_waha"
+}, {
+  "emotion": "n",
+  "intrusiveness": 1,
+  "name": "mario_weak"
+}, {
+  "emotion": "n",
+  "intrusiveness": 2,
+  "name": "mario_whoa"
+}, {
+  "emotion": "g",
+  "intrusiveness": 2,
+  "name": "mario_yahoo"
+}, {
+  "emotion": "n",
+  "intrusiveness": 2,
+  "name": "mario_yawn"
+}, {
+  "emotion": "g",
+  "intrusiveness": 2,
+  "name": "mario_yippee"
+}, {
+  "emotion": "n",
+  "intrusiveness": 1,
+  "name": "peach_mario_2"
+}, {
+  "emotion": "n",
+  "intrusiveness": 1,
+  "name": "penguin_baby"
+}, {
+  "emotion": "b",
+  "intrusiveness": 1,
+  "name": "splash"
+}, {
+  "emotion": "g",
+  "intrusiveness": 3,
+  "name": "star_appears"
+}, {
+  "emotion": "n",
+  "intrusiveness": 1,
+  "name": "ukkiki"
+}, {
+  "emotion": "n",
+  "intrusiveness": 1,
+  "name": "yoshi"
+}]

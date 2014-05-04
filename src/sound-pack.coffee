@@ -6,7 +6,7 @@ Speaker = require 'speaker'
 fs = require 'fs'
 
 PACK_URL = 'https://choir.io/static/packs'
-PACK_DIR = '../sounds'
+PACK_DIR = './sounds'
 
 SoundPack = (pack) ->
 
@@ -17,12 +17,16 @@ SoundPack = (pack) ->
   self.sounds = []
   self.pack = pack
 
-  request.get
-    url: "#{PACK_URL}/#{self.pack}/pack.json"
-    json: true
-  , (err, res, body) ->
-    self.sounds = body
 
+  if ['bloop', 'submarine'].indexOf(self.pack) isnt -1
+    request.get
+      url: "#{PACK_URL}/#{self.pack}/pack.json"
+      json: true
+    , (err, res, body) ->
+      self.sounds = body
+  else
+    local_pack = require "../packs/#{self.pack}/pack.json"
+    self.sounds = local_pack
 
   self.parse = (id, label) ->
     path = id.split '/'
