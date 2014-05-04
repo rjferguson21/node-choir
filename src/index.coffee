@@ -10,7 +10,7 @@ q = async.queue (task, callback) ->
   console.log task
   sound_pack.play task.mp3
   .on 'close', callback
-, 4
+, 1
 
 
 ws.on 'open', ->
@@ -25,10 +25,10 @@ ws.on 'open', ->
         clip = sound_pack.parse data.sound, data.label
         mp3 = sound_pack.get_mp3 clip
 
-        console.log clip, q.length()
         delay = Math.random() * data.sprinkle or 0
 
         setTimeout ->
+          console.log clip, q.length()
           q.push { mp3 }, ->
             console.log 'done'
         , delay

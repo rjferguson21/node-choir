@@ -3,6 +3,7 @@ _ = require 'lodash'
 request = require 'request'
 lame = require 'lame'
 Speaker = require 'speaker'
+fs = require 'fs'
 
 PACK_DIR = 'https://choir.io/static/packs'
 
@@ -52,7 +53,7 @@ SoundPack = (pack) ->
 
     speaker = new Speaker
 
-    request.get path
+    fs.createReadStream('../sounds/drip1.mp3')
     .pipe new lame.Decoder()
     .on 'format', (format) ->
       this.pipe speaker
