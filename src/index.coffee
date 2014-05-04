@@ -3,7 +3,7 @@ WebSocket = require 'ws'
 pack = require './sound-pack'
 async = require 'async'
 
-ws = new WebSocket "wss://api.choir.io/player/stream/d5da74d767826792/ff5b9a8fffa92998?last_message=0&player_version=1399084632"
+ws = new WebSocket "wss://api.choir.io/player/stream/d5da74d767826792/dd524b72f972703f?last_message=0&player_version=1399238790"
 sound_pack = pack process.argv[2] or 'submarine'
 
 q = async.queue (task, callback) ->
